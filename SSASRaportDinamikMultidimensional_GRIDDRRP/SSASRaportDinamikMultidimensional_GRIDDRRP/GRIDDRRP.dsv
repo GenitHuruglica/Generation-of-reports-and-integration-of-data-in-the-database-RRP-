@@ -1,0 +1,159 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0287b58b-df68-4766-9a87-d5761ac12418" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>GRIDDRRP</ID>
+  <Name>GRIDDRRP</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="8" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-11264" scrolltop="-2835" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="25665" y="13520" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="griddrrp_klientet" left="-8149" top="-1852" logicalid="4" controlid="1" masterid="0" hint1="0" hint2="0" width="3096" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000180c0000f40d0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_griddrrp_klientet" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="griddrrp_rrobaqepsi" left="-7752" top="3670" logicalid="5" controlid="2" masterid="0" hint1="0" hint2="0" width="3096" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000180c000057070000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_griddrrp_rrobaqepsi" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="-5801" top="1420" logicalid="6" controlid="3" masterid="0" hint1="0" hint2="0" width="1097" height="2750" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FK_griddrrp_klientet_griddrrp_rrobaqepsi]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="8" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="-5104" y="3670" />
+                    <point x="-5104" y="3270" />
+                    <point x="-5501" y="3270" />
+                    <point x="-5501" y="1720" />
+                  </connector>
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-11264</DiagramViewPortLeft>
+            <DiagramViewPortTop>-2835</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>GRIDDRRP</DataSourceID>
+  <Schema>
+    <xs:schema id="GRIDDRRP" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="GRIDDRRP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="c2437917-2b1a-4814-982b-15afdb9fce0d">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_griddrrp_klientet" msprop:design-time-name="c3da19dc-654e-4996-99f0-2c4e053ca9ed" msprop:FriendlyName="griddrrp_klientet" msprop:DbSchemaName="dbo" msprop:DbTableName="griddrrp_klientet" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Klienti" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="2a0c0bcd-dfbe-4749-b5eb-3f442eae3bdc" msprop:DbColumnName="ID_Klienti" msprop:FriendlyName="ID_Klienti" type="xs:int" />
+                  <xs:element name="Emri_Klienti" msprop:design-time-name="2dc6147c-5831-4232-98c6-de358a69245f" msprop:DbColumnName="Emri_Klienti" msprop:FriendlyName="Emri_Klienti">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Mbiemri_Klienti" msprop:design-time-name="2106f9a4-cb2e-4408-8daa-619da4f041bb" msprop:DbColumnName="Mbiemri_Klienti" msprop:FriendlyName="Mbiemri_Klienti">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Nr_RrobaveK" msprop:design-time-name="06d4d769-86c0-4c66-81ce-f86263c394f0" msprop:DbColumnName="Nr_RrobaveK" msprop:FriendlyName="Nr_RrobaveK" type="xs:int" />
+                  <xs:element name="Cmimi_rr" msprop:design-time-name="f086d1b9-c3ff-4096-8c51-af4da62146f0" msprop:DbColumnName="Cmimi_rr" msprop:FriendlyName="Cmimi_rr" type="xs:decimal" />
+                  <xs:element name="ID_Rrobaqepsi" msprop:design-time-name="1d322f28-c6ae-445c-938d-6b0177039035" msprop:DbColumnName="ID_Rrobaqepsi" msprop:FriendlyName="ID_Rrobaqepsi" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_griddrrp_rrobaqepsi" msprop:design-time-name="0fc7a9cc-9209-4868-a5e0-86c27c1ad141" msprop:FriendlyName="griddrrp_rrobaqepsi" msprop:DbSchemaName="dbo" msprop:DbTableName="griddrrp_rrobaqepsi" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Rrobaqepsi" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="6dcdcf9e-59dd-4759-9157-f2c0ee4cb9df" msprop:DbColumnName="ID_Rrobaqepsi" msprop:FriendlyName="ID_Rrobaqepsi" type="xs:int" />
+                  <xs:element name="Rrobaqepsi" msprop:design-time-name="161a8420-171e-46ce-af52-d2fccef03a26" msprop:DbColumnName="Rrobaqepsi" msprop:FriendlyName="Rrobaqepsi">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_griddrrp_klientet" />
+          <xs:field xpath="ID_Klienti" />
+        </xs:unique>
+        <xs:unique name="dbo_griddrrp_rrobaqepsi_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_griddrrp_rrobaqepsi" />
+          <xs:field xpath="ID_Rrobaqepsi" />
+        </xs:unique>
+        <xs:keyref name="FK_griddrrp_klientet_griddrrp_rrobaqepsi" refer="dbo_griddrrp_rrobaqepsi_Constraint1">
+          <xs:selector xpath=".//dbo_griddrrp_klientet" />
+          <xs:field xpath="ID_Rrobaqepsi" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <GRIDDRRP xmlns="" />
+  </Schema>
+</DataSourceView>

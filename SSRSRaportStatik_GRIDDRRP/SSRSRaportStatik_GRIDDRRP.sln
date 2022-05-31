@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1738
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SSRSRaportStatik_GRIDDRRP", "SSRSRaportStatik_GRIDDRRP\SSRSRaportStatik_GRIDDRRP.rptproj", "{225DAE91-05C7-44CF-B5B1-585ACDFABF63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{225DAE91-05C7-44CF-B5B1-585ACDFABF63}.Debug|Default.ActiveCfg = Debug
+		{225DAE91-05C7-44CF-B5B1-585ACDFABF63}.Debug|Default.Build.0 = Debug
+		{225DAE91-05C7-44CF-B5B1-585ACDFABF63}.Debug|Default.Deploy.0 = Debug
+		{225DAE91-05C7-44CF-B5B1-585ACDFABF63}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{225DAE91-05C7-44CF-B5B1-585ACDFABF63}.DebugLocal|Default.Build.0 = DebugLocal
+		{225DAE91-05C7-44CF-B5B1-585ACDFABF63}.Release|Default.ActiveCfg = Release
+		{225DAE91-05C7-44CF-B5B1-585ACDFABF63}.Release|Default.Build.0 = Release
+		{225DAE91-05C7-44CF-B5B1-585ACDFABF63}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF6A0419-C9E5-4BE3-B5A3-A200F54E3694}
+	EndGlobalSection
+EndGlobal

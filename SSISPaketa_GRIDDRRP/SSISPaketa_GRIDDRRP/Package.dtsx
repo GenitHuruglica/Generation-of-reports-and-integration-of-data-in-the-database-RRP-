@@ -1,0 +1,1739 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/27/2022 2:35:44 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-9O81675"
+  DTS:CreatorName="DESKTOP-9O81675\Genit Huruglica"
+  DTS:DTSID="{5AB0FC84-763E-42DE-8289-5438987A8A84}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{08144E6A-E6CB-4A93-A996-A52AA89969A7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SSIS Paketa"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8846F1A5-9EEB-4423-89BE-0E6E42AF7ECE}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SSIS Paketa"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\SSIS Paketa\Bashkimi"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Bashkimi"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[ID_Klienti]"
+                      cachedDataType="i4"
+                      cachedName="ID_Klienti"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[ID_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Emri_Klienti]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Emri_Klienti"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Emri_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Mbiemri_Klienti]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Mbiemri_Klienti"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Mbiemri_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Nr_RrobaveK]"
+                      cachedDataType="i4"
+                      cachedName="Nr_RrobaveK"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Nr_RrobaveK]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Cmimi_rr]"
+                      cachedDataType="numeric"
+                      cachedName="Cmimi_rr"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Cmimi_rr]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[ID_Rrobaqepsi]"
+                      cachedDataType="i4"
+                      cachedName="ID_Rrobaqepsi"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[ID_Rrobaqepsi]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[ID_Klienti]"
+                      cachedDataType="i4"
+                      cachedName="ID_Klienti"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[ID_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Emri_Klienti]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Emri_Klienti"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Emri_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Mbiemri_Klienti]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Mbiemri_Klienti"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Mbiemri_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Nr_RrobaveK]"
+                      cachedDataType="i4"
+                      cachedName="Nr_RrobaveK"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Nr_RrobaveK]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Cmimi_rr]"
+                      cachedDataType="numeric"
+                      cachedName="Cmimi_rr"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Cmimi_rr]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[ID_Rrobaqepsi]"
+                      cachedDataType="i4"
+                      cachedName="ID_Rrobaqepsi"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[ID_Rrobaqepsi]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti]"
+                      name="ID_Klienti"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[ID_Klienti]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti (1)]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti (1)]"
+                      name="ID_Klienti (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[ID_Klienti]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Klienti]"
+                      name="Emri_Klienti">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Emri_Klienti]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Klienti (1)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Klienti (1)]"
+                      name="Emri_Klienti (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Emri_Klienti]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Klienti]"
+                      name="Mbiemri_Klienti">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Mbiemri_Klienti]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Klienti (1)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Klienti (1)]"
+                      name="Mbiemri_Klienti (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Mbiemri_Klienti]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Nr_RrobaveK]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Nr_RrobaveK]"
+                      name="Nr_RrobaveK">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Nr_RrobaveK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Nr_RrobaveK (1)]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Nr_RrobaveK (1)]"
+                      name="Nr_RrobaveK (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Nr_RrobaveK]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Cmimi_rr]"
+                      dataType="numeric"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Cmimi_rr]"
+                      name="Cmimi_rr"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[Cmimi_rr]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Cmimi_rr (1)]"
+                      dataType="numeric"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Cmimi_rr (1)]"
+                      name="Cmimi_rr (1)"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[Cmimi_rr]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Rrobaqepsi]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Rrobaqepsi]"
+                      name="ID_Rrobaqepsi">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input].Columns[ID_Rrobaqepsi]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Rrobaqepsi (1)]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Rrobaqepsi (1)]"
+                      name="ID_Rrobaqepsi (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input].Columns[ID_Rrobaqepsi]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\Fshirja"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Fshirja"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE FROM griddrrp_klientet_ere  WHERE ID_Klienti=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SSIS Paketa\Fshirja.Connections[OleDbConnection]"
+                  connectionManagerID="{4A30AFC3-7BA1-40BC-BE6D-C6BDC98479C2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-9O81675.GRIDDRRP]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SSIS Paketa\Fshirja.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Fshirja.Inputs[OLE DB Command Input].Columns[ID_Klienti (1)]"
+                      cachedDataType="i4"
+                      cachedName="ID_Klienti (1)"
+                      externalMetadataColumnId="Package\SSIS Paketa\Fshirja.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Fshirja.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Fshirja.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\SSIS Paketa\Fshirja.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Fshirja.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\SSIS Paketa\Fshirja.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Fshirja.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Fshirja.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Fshirja.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Fshirja.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\griddrrp_klientet"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="griddrrp_klientet"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT ID_Klienti,Emri_Klienti,Mbiemri_Klienti,Nr_RrobaveK,Cmimi_rr,ID_Rrobaqepsi FROM griddrrp_klientet ORDER BY ID_Klienti</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SSIS Paketa\griddrrp_klientet.Connections[OleDbConnection]"
+                  connectionManagerID="{4A30AFC3-7BA1-40BC-BE6D-C6BDC98479C2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-9O81675.GRIDDRRP]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output]"
+                  isSorted="true"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[ID_Klienti]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[ID_Klienti]"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[ID_Klienti]"
+                      name="ID_Klienti"
+                      sortKeyPosition="1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Emri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[Emri_Klienti]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Emri_Klienti]"
+                      name="Emri_Klienti"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Mbiemri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[Mbiemri_Klienti]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Mbiemri_Klienti]"
+                      name="Mbiemri_Klienti"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Nr_RrobaveK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[Nr_RrobaveK]"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Nr_RrobaveK]"
+                      name="Nr_RrobaveK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Cmimi_rr]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[Cmimi_rr]"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[Cmimi_rr]"
+                      name="Cmimi_rr"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[ID_Rrobaqepsi]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[ID_Rrobaqepsi]"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].Columns[ID_Rrobaqepsi]"
+                      name="ID_Rrobaqepsi"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[ID_Klienti]"
+                      dataType="i4"
+                      name="ID_Klienti" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[Emri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Emri_Klienti" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[Mbiemri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Mbiemri_Klienti" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[Nr_RrobaveK]"
+                      dataType="i4"
+                      name="Nr_RrobaveK" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[Cmimi_rr]"
+                      dataType="numeric"
+                      name="Cmimi_rr"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output].ExternalColumns[ID_Rrobaqepsi]"
+                      dataType="i4"
+                      name="ID_Rrobaqepsi" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  isSorted="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[ID_Klienti]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[ID_Klienti]"
+                      name="ID_Klienti"
+                      sortKeyPosition="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[Emri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[Emri_Klienti]"
+                      name="Emri_Klienti" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[Mbiemri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[Mbiemri_Klienti]"
+                      name="Mbiemri_Klienti" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[Nr_RrobaveK]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[Nr_RrobaveK]"
+                      name="Nr_RrobaveK" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[Cmimi_rr]"
+                      dataType="numeric"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[Cmimi_rr]"
+                      name="Cmimi_rr"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[ID_Rrobaqepsi]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[ID_Rrobaqepsi]"
+                      name="ID_Rrobaqepsi" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\griddrrp_klientet_ere"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="griddrrp_klientet_ere"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT ID_Klienti,Emri_Klienti,Mbiemri_Klienti,Nr_RrobaveK,Cmimi_rr,ID_Rrobaqepsi FROM griddrrp_klientet_ere ORDER BY ID_Klienti</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SSIS Paketa\griddrrp_klientet_ere.Connections[OleDbConnection]"
+                  connectionManagerID="{4A30AFC3-7BA1-40BC-BE6D-C6BDC98479C2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-9O81675.GRIDDRRP]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output]"
+                  isSorted="true"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[ID_Klienti]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[ID_Klienti]"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[ID_Klienti]"
+                      name="ID_Klienti"
+                      sortKeyPosition="1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Emri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[Emri_Klienti]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Emri_Klienti]"
+                      name="Emri_Klienti"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Mbiemri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[Mbiemri_Klienti]"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Mbiemri_Klienti]"
+                      name="Mbiemri_Klienti"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Nr_RrobaveK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[Nr_RrobaveK]"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Nr_RrobaveK]"
+                      name="Nr_RrobaveK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Cmimi_rr]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[Cmimi_rr]"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[Cmimi_rr]"
+                      name="Cmimi_rr"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[ID_Rrobaqepsi]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[ID_Rrobaqepsi]"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].Columns[ID_Rrobaqepsi]"
+                      name="ID_Rrobaqepsi"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[ID_Klienti]"
+                      dataType="i4"
+                      name="ID_Klienti" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[Emri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Emri_Klienti" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[Mbiemri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Mbiemri_Klienti" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[Nr_RrobaveK]"
+                      dataType="i4"
+                      name="Nr_RrobaveK" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[Cmimi_rr]"
+                      dataType="numeric"
+                      name="Cmimi_rr"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output].ExternalColumns[ID_Rrobaqepsi]"
+                      dataType="i4"
+                      name="ID_Rrobaqepsi" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  isSorted="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[ID_Klienti]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[ID_Klienti]"
+                      name="ID_Klienti"
+                      sortKeyPosition="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[Emri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[Emri_Klienti]"
+                      name="Emri_Klienti" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[Mbiemri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[Mbiemri_Klienti]"
+                      name="Mbiemri_Klienti" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[Nr_RrobaveK]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[Nr_RrobaveK]"
+                      name="Nr_RrobaveK" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[Cmimi_rr]"
+                      dataType="numeric"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[Cmimi_rr]"
+                      name="Cmimi_rr"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[ID_Rrobaqepsi]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[ID_Rrobaqepsi]"
+                      name="ID_Rrobaqepsi" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\Modifiko"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Modifiko"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE griddrrp_klientet_ere SET Emri_Klienti=?,Mbiemri_Klienti=?,Nr_RrobaveK=?,Cmimi_rr=?,ID_Rrobaqepsi=? WHERE ID_Klienti=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SSIS Paketa\Modifiko.Connections[OleDbConnection]"
+                  connectionManagerID="{4A30AFC3-7BA1-40BC-BE6D-C6BDC98479C2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-9O81675.GRIDDRRP]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].Columns[Emri_Klienti]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Emri_Klienti"
+                      externalMetadataColumnId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].Columns[Mbiemri_Klienti]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Mbiemri_Klienti"
+                      externalMetadataColumnId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].Columns[Nr_RrobaveK]"
+                      cachedDataType="i4"
+                      cachedName="Nr_RrobaveK"
+                      externalMetadataColumnId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Nr_RrobaveK]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].Columns[Cmimi_rr]"
+                      cachedDataType="numeric"
+                      cachedName="Cmimi_rr"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Cmimi_rr]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].Columns[ID_Rrobaqepsi]"
+                      cachedDataType="i4"
+                      cachedName="ID_Rrobaqepsi"
+                      externalMetadataColumnId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Rrobaqepsi]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].Columns[ID_Klienti]"
+                      cachedDataType="i4"
+                      cachedName="ID_Klienti"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="numeric"
+                      name="Param_3"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="i4"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="i4"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Modifiko.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Modifiko.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Modifiko.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Modifiko.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Modifiko.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Modifiko.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\Ndarja me kusht"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Ndarja me kusht"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input].Columns[ID_Klienti]"
+                      cachedDataType="i4"
+                      cachedName="ID_Klienti"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input].Columns[ID_Klienti (1)]"
+                      cachedDataType="i4"
+                      cachedName="ID_Klienti (1)"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti (1)]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input].Columns[Emri_Klienti]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Emri_Klienti"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input].Columns[Emri_Klienti (1)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Emri_Klienti (1)"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Klienti (1)]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input].Columns[Nr_RrobaveK]"
+                      cachedDataType="i4"
+                      cachedName="Nr_RrobaveK"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Nr_RrobaveK]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input].Columns[Nr_RrobaveK (1)]"
+                      cachedDataType="i4"
+                      cachedName="Nr_RrobaveK (1)"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Nr_RrobaveK (1)]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input].Columns[Cmimi_rr]"
+                      cachedDataType="numeric"
+                      cachedName="Cmimi_rr"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Cmimi_rr]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input].Columns[Cmimi_rr (1)]"
+                      cachedDataType="numeric"
+                      cachedName="Cmimi_rr (1)"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Cmimi_rr (1)]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input].Columns[ID_Rrobaqepsi]"
+                      cachedDataType="i4"
+                      cachedName="ID_Rrobaqepsi"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Rrobaqepsi]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input].Columns[ID_Rrobaqepsi (1)]"
+                      cachedDataType="i4"
+                      cachedName="ID_Rrobaqepsi (1)"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Rrobaqepsi (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Ndarja me kusht.Outputs[Fshirja]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Fshirja"
+                  synchronousInputId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti]}) &amp;&amp; ![ISNULL](#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(ID_Klienti) &amp;&amp; !ISNULL([ID_Klienti (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Ndarja me kusht.Outputs[ERE]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="ERE"
+                  synchronousInputId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti]}) &amp;&amp; [ISNULL](#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(ID_Klienti) &amp;&amp; ISNULL([ID_Klienti (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Ndarja me kusht.Outputs[Modifiko]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Modifiko"
+                  synchronousInputId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">!(#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti]} == #{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti (1)]}) || !(#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Klienti]} == #{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Klienti (1)]}) || !(#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Nr_RrobaveK]} == #{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Nr_RrobaveK (1)]}) || !(#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Cmimi_rr]} == #{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Cmimi_rr (1)]}) || !(#{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Rrobaqepsi]} == #{Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Rrobaqepsi (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!(ID_Klienti == [ID_Klienti (1)]) || !(Emri_Klienti == [Emri_Klienti (1)]) || !(Nr_RrobaveK == [Nr_RrobaveK (1)]) || !(Cmimi_rr == [Cmimi_rr (1)]) || !(ID_Rrobaqepsi == [ID_Rrobaqepsi (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Ndarja me kusht.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SSIS Paketa\Ndarja me kusht.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Ndarja me kusht.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Ndarja me kusht.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Ndarja me kusht.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SSIS Paketa\Shtimi"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Shtimi"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[griddrrp_klientet_ere]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SSIS Paketa\Shtimi.Connections[OleDbConnection]"
+                  connectionManagerID="{4A30AFC3-7BA1-40BC-BE6D-C6BDC98479C2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-9O81675.GRIDDRRP]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].Columns[ID_Klienti]"
+                      cachedDataType="i4"
+                      cachedName="ID_Klienti"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[ID_Klienti]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].Columns[Emri_Klienti]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Emri_Klienti"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[Emri_Klienti]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Emri_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].Columns[Mbiemri_Klienti]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Mbiemri_Klienti"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[Mbiemri_Klienti]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Mbiemri_Klienti]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].Columns[Nr_RrobaveK]"
+                      cachedDataType="i4"
+                      cachedName="Nr_RrobaveK"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[Nr_RrobaveK]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Nr_RrobaveK]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].Columns[Cmimi_rr]"
+                      cachedDataType="numeric"
+                      cachedName="Cmimi_rr"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[Cmimi_rr]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[Cmimi_rr]" />
+                    <inputColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].Columns[ID_Rrobaqepsi]"
+                      cachedDataType="i4"
+                      cachedName="ID_Rrobaqepsi"
+                      externalMetadataColumnId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[ID_Rrobaqepsi]"
+                      lineageId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output].Columns[ID_Rrobaqepsi]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[ID_Klienti]"
+                      dataType="i4"
+                      name="ID_Klienti" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[Emri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Emri_Klienti" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[Mbiemri_Klienti]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Mbiemri_Klienti" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[Nr_RrobaveK]"
+                      dataType="i4"
+                      name="Nr_RrobaveK" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[Cmimi_rr]"
+                      dataType="numeric"
+                      name="Cmimi_rr"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input].ExternalColumns[ID_Rrobaqepsi]"
+                      dataType="i4"
+                      name="ID_Rrobaqepsi" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SSIS Paketa\Shtimi.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Shtimi.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Shtimi.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SSIS Paketa\Shtimi.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SSIS Paketa\Shtimi.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\SSIS Paketa.Paths[ERE]"
+              endId="Package\SSIS Paketa\Shtimi.Inputs[OLE DB Destination Input]"
+              name="ERE"
+              startId="Package\SSIS Paketa\Ndarja me kusht.Outputs[ERE]" />
+            <path
+              refId="Package\SSIS Paketa.Paths[Fshirja]"
+              endId="Package\SSIS Paketa\Fshirja.Inputs[OLE DB Command Input]"
+              name="Fshirja"
+              startId="Package\SSIS Paketa\Ndarja me kusht.Outputs[Fshirja]" />
+            <path
+              refId="Package\SSIS Paketa.Paths[Merge Join Output]"
+              endId="Package\SSIS Paketa\Ndarja me kusht.Inputs[Conditional Split Input]"
+              name="Merge Join Output"
+              startId="Package\SSIS Paketa\Bashkimi.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\SSIS Paketa.Paths[Modifiko]"
+              endId="Package\SSIS Paketa\Modifiko.Inputs[OLE DB Command Input]"
+              name="Modifiko"
+              startId="Package\SSIS Paketa\Ndarja me kusht.Outputs[Modifiko]" />
+            <path
+              refId="Package\SSIS Paketa.Paths[OLE DB Source Output]"
+              endId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Left Input]"
+              name="OLE DB Source Output"
+              startId="Package\SSIS Paketa\griddrrp_klientet.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\SSIS Paketa.Paths[OLE DB Source Output1]"
+              endId="Package\SSIS Paketa\Bashkimi.Inputs[Merge Join Right Input]"
+              name="OLE DB Source Output"
+              startId="Package\SSIS Paketa\griddrrp_klientet_ere.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="136,42"
+          Id="Package\SSIS Paketa"
+          TopLeft="73.5,73.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\SSIS Paketa">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="110,42"
+          Id="Package\SSIS Paketa\Fshirja"
+          TopLeft="379,293" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\SSIS Paketa\Shtimi"
+          TopLeft="199,296" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\SSIS Paketa\griddrrp_klientet"
+          TopLeft="174,35" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\SSIS Paketa\griddrrp_klientet_ere"
+          TopLeft="491,34" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\SSIS Paketa\Modifiko"
+          TopLeft="578,302" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\SSIS Paketa\Bashkimi"
+          TopLeft="370,131" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\SSIS Paketa\Ndarja me kusht"
+          TopLeft="352,200" />
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[OLE DB Source Output1]"
+          TopLeft="580,76">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-130.666666666667,55"
+              Start="0,0"
+              End="-130.666666666667,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5693311582382" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5693311582382"
+                    Point2="0,32.5693311582382"
+                    Point3="-4,32.5693311582382" />
+                  <mssgle:LineSegment
+                    End="-126.666666666667,32.5693311582382" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-126.666666666667,32.5693311582382"
+                    Point2="-130.666666666667,32.5693311582382"
+                    Point3="-130.666666666667,36.5693311582382" />
+                  <mssgle:LineSegment
+                    End="-130.666666666667,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[OLE DB Source Output]"
+          TopLeft="252.5,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="159.166666666667,54"
+              Start="0,0"
+              End="159.166666666667,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.9771615008157" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.9771615008157"
+                    Point2="0,31.9771615008157"
+                    Point3="4,31.9771615008157" />
+                  <mssgle:LineSegment
+                    End="155.166666666667,31.9771615008157" />
+                  <mssgle:CubicBezierSegment
+                    Point1="155.166666666667,31.9771615008157"
+                    Point2="159.166666666667,31.9771615008157"
+                    Point3="159.166666666667,35.9771615008157" />
+                  <mssgle:LineSegment
+                    End="159.166666666667,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[Modifiko]"
+          TopLeft="467.75,242">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="169.25,60"
+              Start="0,0"
+              End="169.25,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.6680584551148" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.6680584551148"
+                    Point2="0,20.6680584551148"
+                    Point3="4,20.6680584551148" />
+                  <mssgle:LineSegment
+                    End="165.25,20.6680584551148" />
+                  <mssgle:CubicBezierSegment
+                    Point1="165.25,20.6680584551148"
+                    Point2="169.25,20.6680584551148"
+                    Point3="169.25,24.6680584551148" />
+                  <mssgle:LineSegment
+                    End="169.25,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="65.71296875,25.6680584551148,37.8240625,9.7978515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[Merge Join Output]"
+          TopLeft="430.5,173">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[Fshirja]"
+          TopLeft="432.25,242">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-14.923359375,15.91845703125,29.84671875,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SSIS Paketa.Paths[ERE]"
+          TopLeft="393.25,242">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-140.25,54"
+              Start="0,0"
+              End="-140.25,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.6012526096033" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.6012526096033"
+                    Point2="0,18.6012526096033"
+                    Point3="-4,18.6012526096033" />
+                  <mssgle:LineSegment
+                    End="-136.25,18.6012526096033" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-136.25,18.6012526096033"
+                    Point2="-140.25,18.6012526096033"
+                    Point3="-140.25,22.6012526096033" />
+                  <mssgle:LineSegment
+                    End="-140.25,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-79.30794921875,23.6012526096033,18.3658984375,9.2705078125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SSIS Paketa\Shtimi">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SSIS Paketa\griddrrp_klientet">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SSIS Paketa\griddrrp_klientet_ere">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

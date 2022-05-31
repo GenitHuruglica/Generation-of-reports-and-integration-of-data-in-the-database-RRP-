@@ -1,0 +1,75 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>SSASRaportDinamikMultidimensional_GRIDDRRP</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>true</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>pP0SRFdAawC05X357vkBihealjQ=1/24/2022 12:39:04 PM1/24/2022 12:39:04 PM</TimeStamp>
+        <ID>
+          <String>GRIDDRRP</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>VgC+jO+WBUoO3WzZ5dCKWczFFz4=1/29/2022 9:03:30 PM1/24/2022 12:40:52 PM</TimeStamp>
+        <ID>
+          <String>GRIDDRRP</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>JTLc7HC6eRaOK++7/rK+Suf2OU8=1/24/2022 12:53:42 PM1/24/2022 12:53:42 PM</TimeStamp>
+        <ID>
+          <String>Griddrrp Rrobaqepsi</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>0ptXbjmLyj78aC5ezo+dURcMnhY=1/24/2022 12:54:18 PM1/24/2022 12:54:18 PM</TimeStamp>
+        <ID>
+          <String>Griddrrp Klientet</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>svlaK5EskBRONkQ0zXiHK1koZg4=1/29/2022 9:04:42 PM1/24/2022 12:55:09 PMRO1TBw/oAsBBIuGu2ujUNb6fJoo=1/24/2022 12:55:09 PM1/24/2022 12:55:09 PM</TimeStamp>
+        <ID>
+          <String>GRIDDRRP</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Role</Type>
+        <TimeStamp>ktEiA5XRRR+pfqHUydXEwnAFY8Q=1/24/2022 12:35:08 PM1/24/2022 12:33:07 PM</TimeStamp>
+        <ID>
+          <String>Role</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>v4oYm6fWwM0mvqfROY5HE7eul4o=1/24/2022 12:35:08 PM1/24/2022 12:32:03 PM</TimeStamp>
+      <ID>
+        <String>SSASRaportDinamikMultidimensional_GRIDDRRP</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2022-01-29T20:45:14.553333Z</LastDeployed>
+</DeploymentSnapshot>

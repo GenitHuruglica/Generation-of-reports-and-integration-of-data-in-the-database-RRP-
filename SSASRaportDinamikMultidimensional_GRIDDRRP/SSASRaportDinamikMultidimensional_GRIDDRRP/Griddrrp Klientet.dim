@@ -1,0 +1,201 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a81d18b9-282f-4103-a690-5b5458745bb1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Griddrrp Klientet</ID>
+  <Name>Griddrrp Klientet</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="702ccf45-c047-4626-89da-853ea7797277">
+    <DataSourceViewID>GRIDDRRP</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="de58c822-b04c-4857-9af4-363f39fcf3b7">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="2ac7ec30-9d0a-42dc-8093-1b3965a8955d">
+      <ID>ID Klienti</ID>
+      <Name>ID Klienti</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="75be8ac7-b585-4e2d-a4ac-b8acfe9e578c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="048e4106-71f1-4545-a6b5-bac6a283ba44">
+            <TableID>dbo_griddrrp_klientet</TableID>
+            <ColumnID>ID_Klienti</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="7d2621d9-9a7c-4e93-b483-5d9ae42a5f08">
+          <AttributeID>Emri Klienti</AttributeID>
+          <Name>Emri Klienti</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4cb467f3-8117-4fb7-a6da-00a97b62e164">
+          <AttributeID>Mbiemri Klienti</AttributeID>
+          <Name>Mbiemri Klienti</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a8c97213-4d05-4a15-ba1d-f265da741ef3">
+          <AttributeID>Nr Rrobave K</AttributeID>
+          <Name>Nr Rrobave K</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4331c05b-d929-4415-8249-6cb8ff2effef">
+          <AttributeID>Cmimi Rr</AttributeID>
+          <Name>Cmimi Rr</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="549d7366-69ee-4853-9cb8-31ac5a028053">
+          <AttributeID>ID Rrobaqepsi</AttributeID>
+          <Name>ID Rrobaqepsi</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="408d7d7d-dcf4-41ab-9f87-e32a108a9adf">
+      <ID>Emri Klienti</ID>
+      <Name>Emri Klienti</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ccaacf66-41ad-4080-9ae0-67c0d1bfe94e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ff8935f1-a0e2-40db-bca4-cc18f8bd37f2">
+            <TableID>dbo_griddrrp_klientet</TableID>
+            <ColumnID>Emri_Klienti</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d46092e5-3b10-4a70-980d-d18043b8ba56">
+      <ID>Mbiemri Klienti</ID>
+      <Name>Mbiemri Klienti</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b3149ad9-1058-4e60-acdc-d85a0ed0f9a3">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="35296c35-7661-4cef-917e-fb91f2dda0c1">
+            <TableID>dbo_griddrrp_klientet</TableID>
+            <ColumnID>Mbiemri_Klienti</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9b7a7daa-253e-432d-9378-c65ba1c6541b">
+      <ID>Nr Rrobave K</ID>
+      <Name>Nr Rrobave K</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="049d24d8-2f6c-450a-9b7d-554310222153">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e6051d4a-5c7b-4f9f-a706-5ab33556519e">
+            <TableID>dbo_griddrrp_klientet</TableID>
+            <ColumnID>Nr_RrobaveK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a01e44ad-14ca-41f3-8cdd-b802bef8cc61">
+      <ID>Cmimi Rr</ID>
+      <Name>Cmimi Rr</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b7f172b7-981a-472f-b089-025f9778d3cb">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d7154469-a8f8-49d3-8747-3f683f8ceda6">
+            <TableID>dbo_griddrrp_klientet</TableID>
+            <ColumnID>Cmimi_rr</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ee484546-afc7-488d-a873-479d15249e30">
+      <ID>ID Rrobaqepsi</ID>
+      <Name>ID Rrobaqepsi</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="38193a28-6c9e-46d8-b90f-0cb60413637c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2192d467-5cf3-4319-b64c-0398f183a715">
+            <TableID>dbo_griddrrp_rrobaqepsi</TableID>
+            <ColumnID>ID_Rrobaqepsi</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="55b8c85a-2d91-4ee6-b6ff-7a066ce073d5">
+          <AttributeID>Rrobaqepsi</AttributeID>
+          <Name>Rrobaqepsi</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="58c59c81-9241-4ddb-922d-50cf92640ad8">
+      <ID>Rrobaqepsi</ID>
+      <Name>Rrobaqepsi</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="885fcf65-fe8c-4955-81f1-cf4a5036c86f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="56ba2052-7b14-4355-889f-5c454cfab146">
+            <TableID>dbo_griddrrp_rrobaqepsi</TableID>
+            <ColumnID>Rrobaqepsi</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
